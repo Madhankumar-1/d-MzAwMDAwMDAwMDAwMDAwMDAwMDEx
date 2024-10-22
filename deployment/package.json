@@ -5,11 +5,10 @@
           "deployment": "bin/deployment.js"
      },
      "scripts": {
-          "start": "npm install --legacy-peer-deps && npm-run-all build build:authorizer install-lambda deploy output",
+          "start": "npm install --legacy-peer-deps && npm-run-all build install-lambda deploy output",
           "check-deploy": "sh deploy.sh",
           "build": "tsc",
-          "build:authorizer": "cd ../../ts-common-authorizer/src/ && npm install",
-          "install-lambda": "cd ../lambda && sh npmInstall.sh",
+          "install-lambda": "cd ../../lambda/lambda && sh npmInstall.sh",
           "build-lambda": "cd ../lambda && sh npmInstallandBuild.sh",
           "test-ut": "cd ../lambda && sh testUT.sh",
           "clean": "rm -rf *.js && rm -rf *d.ts && rm -rf node_modules && && rm -rf cdk.out",
