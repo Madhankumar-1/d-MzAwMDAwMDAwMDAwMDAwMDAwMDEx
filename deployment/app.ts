@@ -7,9 +7,9 @@ import { generateResourceName } from "@cny-helpers/nodejs";
 
 const app = new cdk.App();
 
-// const extendedGroupEndpoints: TYPES.ExtendedGroupEndpoints = JSON.parse(fs.readFileSync("../inputs/inputs.json", "utf-8"));
+const extendedGroupEndpoints: TYPES.ExtendedGroupEndpoints = JSON.parse(fs.readFileSync("./inputs.json", "utf-8"));
 
-export function deploy(extendedGroupEndpoints: TYPES.ExtendedGroupEndpoints) {
+// export function deploy(extendedGroupEndpoints: TYPES.ExtendedGroupEndpoints) {
 
      for (const [deploymentGroup, deploymentGroupObj] of Object.entries(extendedGroupEndpoints)) {
           const gatewayName = Object.keys(deploymentGroupObj)[0];
@@ -25,7 +25,7 @@ export function deploy(extendedGroupEndpoints: TYPES.ExtendedGroupEndpoints) {
           stack.deploy();
      }
      
-}
+// }
 
 const data = {
      "dummy-api-gen-api-stack": {
