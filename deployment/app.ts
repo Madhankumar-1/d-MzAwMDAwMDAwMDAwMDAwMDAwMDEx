@@ -33,6 +33,7 @@ const data = {
                "account": "1949874554",
                "region": "ap-southeast-2",
                "separateHostedZones": false,
+               "productId":"gi", "orgShortName":"oi",
                "ssmKeys": {
                     "git": {
                          "gitTokenSsmPath": "/git/gitToken",
