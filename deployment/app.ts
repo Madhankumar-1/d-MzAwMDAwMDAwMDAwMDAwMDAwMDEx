@@ -121,4 +121,4 @@ const data = {
 }
 
 
-deploy(data)
+// deploy(data)
