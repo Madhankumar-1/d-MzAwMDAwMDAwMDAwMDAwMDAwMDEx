@@ -101,16 +101,16 @@ export class ApiGenStack extends AwsServerlessStackBase {
 
                const lambdaPath = fileSystemPath.join(__dirname, `../lambda/${endpoint.serviceMethodName}/src/index.js`);
 
-               await this.createNodejsLambda(
-                    endpoint,
-                    environment,
-                    lambdaPath,
-                    {},
-                    lambdaRole,
-                    lambdaBundlingProps,
-                    layer,
-                    buildArgs
-               );
+               // await this.createNodejsLambda(
+               //      endpoint,
+               //      environment,
+               //      lambdaPath,
+               //      {},
+               //      lambdaRole,
+               //      lambdaBundlingProps,
+               //      layer,
+               //      buildArgs
+               // );
           });
      }
 }
