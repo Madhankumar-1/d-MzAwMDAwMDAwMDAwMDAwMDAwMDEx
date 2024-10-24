@@ -18,12 +18,7 @@ export class ApiGenStack extends AwsServerlessStackBase {
      };
      constructor(scope: App, id: string, props: TYPES.ExtendedGroupEndpoints) {
           //Setting account information:
-          super(scope, id, {
-               env: {
-                    region: Object.values(Object.values(props)[0])[0].region,
-                    account: Object.values(Object.values(props)[0])[0].account,
-               },
-          });
+          super(scope, id);
 
           //Deployment
           this.lambdaDeploymentType = ENUMS.LambdaCreationType.Asset;
